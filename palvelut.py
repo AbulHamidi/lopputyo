@@ -33,7 +33,7 @@ class Asiakas:
     """
     eka = random.randint(0,100)
     toka = random.randint(0,100)
-    kolmas = random.randint(0,9)
+    kolmas = random.randint(0,1000)
     
     numero = [eka+toka+kolmas]
     return self.asiakasnumero_asetettu
