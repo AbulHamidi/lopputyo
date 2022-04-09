@@ -7,7 +7,7 @@ class Asiakas:
   nämä toiminnot laittaa asiakkaalle nimi, ikä ja numero.
   """
   
-  def __init__(self, nimi, ika, numero):
+  def __init__(self, nimi, ika):
     
     """
     tässä on muuttujat:
@@ -22,7 +22,6 @@ class Asiakas:
     self.__nimi = nimi
     self.__ika = ika
     self.__numero = luo_nro()
-
     
   def luo_nro(self):
     """
@@ -37,3 +36,5 @@ class Asiakas:
     
     numero = [eka+toka+kolmas]
     return numero
+  
+  
