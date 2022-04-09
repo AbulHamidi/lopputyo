@@ -21,7 +21,7 @@ class Asiakas:
     
     self.__nimi = nimi
     self.__ika = ika
-    self.__numero = numero
+    self.__numero = luo_nro()
 
     
   def luo_nro(self):
@@ -31,7 +31,9 @@ class Asiakas:
     :ivar numero: arvottu satunnainen asiakasnumero
     :type numero: int
     """
+    eka = random.randint(0,100)
+    toka = random.randint(0,100)
+    kolmas = random.randint(0,9)
+    
     numero = [eka+toka+kolmas]
-    eka = random.randint(0,100))
-    toka = random.randint(0,100))
-    kolmas = random.randint(0,9))
+    return numero
