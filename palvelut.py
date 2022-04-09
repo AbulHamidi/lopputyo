@@ -60,7 +60,7 @@ class Palvelu:
   """
   self.tuotenimi = tuotenimi
   self.asiakaslista = []
-  
+ 
   
   
   
