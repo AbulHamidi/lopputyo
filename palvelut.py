@@ -57,6 +57,10 @@ class Asiakas:
 class Palvelu:
   """
   Luokan Palvelu konstruktori saa parametrina tuotenimen. Konstruktorissa luodaan asiakkaat-lista ja alustetaan se tyhjäksi.
+  mothdit:
+  laita_asiakas_listaan()
+  poista_asiakas_listalta()
+  
   """
   def __init__(self, tuotenimi):
     """
@@ -74,9 +78,21 @@ class Palvelu:
     append methodia käytetään listaan lisäämiseen
     """
     self.asiakkaat_lista.append(asiakas)
-    
-    
+  
+  def poista_asiakas_listalta(self, asiakas):
+    """
+    poistaan asiakas(ika, nimi). jos asiakas ei löyty listalta, virhe ignoorataan "pass"
+    """
+    try:
+      self.asiakkaat_lista.remove(asiakas)
+      except ValueError:
+        pass
 
+  def tulosta_asiakkaat(self):
+    """
+    tulostaa asiakkaat
+    """
+    pass
   
   
   
