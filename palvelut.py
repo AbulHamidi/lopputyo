@@ -68,10 +68,15 @@ class Palvelu:
     self.tuotenimi = tuotenimi
     self.asiakkaat_lista = []
  
-  
-  
-  
-  
+  def laita_asiakas_listaan(self, asiakas):
+    """
+    laitetaan asiakkaan ikä ja nimi listaan
+    append methodia käytetään listaan lisäämiseen
+    """
+    self.asiakkaat_lista.append(asiakas)
+    
+    
+
   
   
   
