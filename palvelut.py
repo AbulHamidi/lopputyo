@@ -21,6 +21,7 @@ class Asiakas:
     self.__ika = ika
     self.__numero = numero
 
+    
   def luo_nro(self):
     """
     Konstruktorissa luodaan asiakasnumero käyttämällä luo_nro-metodia.
@@ -28,4 +29,7 @@ class Asiakas:
     :ivar numero: arvottu satunnainen asiakasnumero
     :type numero: int
     """
-    
+    numero = [eka+toka+kolmas]
+    eka = random.randint(0,100))
+    toka = random.randint(0,100))
+    kolmas = random.randint(0,9))
