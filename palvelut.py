@@ -97,5 +97,9 @@ class Palvelu:
       print("  " + self.)
   
   
-  
+  def luo_asiakasrivi(self, asiakas):
+    """
+    tämä palauttaa asiakkaan nimi, asiakasnumero ja ikän
+    """
+    return f'{Asiakas.aseta_nimi(asiakas)} ({Asiakas.luo_nro(asiakas)}) on {Asiakas.aseta_ika(asiakas)}-vuotias.'
   
