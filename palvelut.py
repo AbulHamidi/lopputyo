@@ -58,8 +58,15 @@ class Palvelu:
   """
   Luokan Palvelu konstruktori saa parametrina tuotenimen. Konstruktorissa luodaan asiakkaat-lista ja alustetaan se tyhjäksi.
   """
-  self.tuotenimi = tuotenimi
-  self.asiakaslista = []
+  def __init__(self, tuotenimi):
+    """
+    :ivat tuotenimi: tuotenimi
+    :ivar asiakkaat_lista: lista asiakkaista, eli asiakkaiten tiedot tulee tähän
+    :type tuotenimi: str
+    :type asiakkaat_lista: list
+    """
+    self.tuotenimi = tuotenimi
+    self.asiakkaat_lista = []
  
   
   
