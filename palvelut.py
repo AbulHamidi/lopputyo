@@ -19,14 +19,15 @@ class Asiakas:
     :type numero: int
     """
     
-    self.__nimi = nimi
-    self.__ika = ika
-    self.__numero = luo_nro()
-    
+    self.nimi_asetettu = nimi
+    self.ika_asetettu = ika
+    self.asetettu_asiakasnumero = luo_nro()  
+  
+  
   def luo_nro(self):
     """
     Konstruktorissa luodaan asiakasnumero käyttämällä luo_nro-metodia.
-    arvotaan asiakasnumero satunnaisesti
+    arvotaan asiakasnumero satunnaisesti. asettaa asiakasnumero jos kutsuu
     :ivar numero: arvottu satunnainen asiakasnumero
     :type numero: int
     """
@@ -38,3 +39,15 @@ class Asiakas:
     return numero
   
   
+  def aseta_ika(self, ika):
+    """
+    palauttaa ika muuttajana __ika__
+    """
+    return self.ika_asetettu
+  
+  
+  def aseta_nimi(self, nimi):
+    """
+    palauttaa ika muuttajana __ika__
+    """
+    return self.nimi_asetettu
