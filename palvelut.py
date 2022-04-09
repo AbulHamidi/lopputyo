@@ -92,7 +92,9 @@ class Palvelu:
     """
     tulostaa asiakkaat
     """
-    pass
+    print("tuotteen " + self.tuotenimi + "asiakkaat ovat: ")
+    for asiakas in self.asiakkaat_lista:
+      print("  " + self.)
   
   
   
