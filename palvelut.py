@@ -51,3 +51,21 @@ class Asiakas:
     palauttaa nimi, muuttajana nimi_asetettu
     """
     return self.nimi_asetettu
+
+  
+
+class Palvelu:
+  """
+  Luokan Palvelu konstruktori saa parametrina tuotenimen. Konstruktorissa luodaan asiakkaat-lista ja alustetaan se tyhjäksi.
+  """
+  self.tuotenimi = tuotenimi
+  self.asiakaslista = []
+  
+  
+  
+  
+  
+  
+  
+  
+  
