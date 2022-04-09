@@ -21,7 +21,7 @@ class Asiakas:
     
     self.nimi_asetettu = nimi
     self.ika_asetettu = ika
-    self.asetettu_asiakasnumero = luo_nro()  
+    self.asiakasnumero_asetettu = numero 
   
   
   def luo_nro(self):
@@ -36,18 +36,18 @@ class Asiakas:
     kolmas = random.randint(0,9)
     
     numero = [eka+toka+kolmas]
-    return numero
+    return self.asiakasnumero_asetettu
   
   
   def aseta_ika(self, ika):
     """
-    palauttaa ika muuttajana __ika__
+    palauttaa ikää, muuttajana ika_asetettu
     """
     return self.ika_asetettu
   
   
   def aseta_nimi(self, nimi):
     """
-    palauttaa ika muuttajana __ika__
+    palauttaa nimi, muuttajana nimi_asetettu
     """
     return self.nimi_asetettu
