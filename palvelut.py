@@ -19,9 +19,9 @@ class Asiakas:
     :type numero: int
     """
     
-    self.nimi = nimi
-    self.ika = ika
-    self.numero = self.luo_nro
+    self.__nimi = nimi
+    self.__ika = ika
+    self.__numero = self.luo_nro
   
   
   def luo_nro(self):
@@ -32,7 +32,7 @@ class Asiakas:
     :type numero: int
     """
     numero = []
-    numero.append(random.randint(0, 999))
+    numero.append(random.randint(0, 99))
     numero.append(random.randint(0, 999))
     numero.append(random.randint(0, 999))
     return numero
@@ -53,7 +53,7 @@ class Asiakas:
     self.nimi = nimi
     return nimi
 
-  def asiakas_numero(self):
+  def aseta_numero(self):
     """
     palauttaa numeron
     """
@@ -106,7 +106,7 @@ class Palvelu:
     """
     palauttaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    return f"{Asiakas.nimi} ({Asiakas.asiakas_numero}) on {Asiakas.ika}-vuotias."
+    return f"{Asiakas.aseta_nimi(nimi)} ({Asiakas.aseta_numero}) on {aseta_ika(ika)}-vuotias."
   
 class ParempiPalvelu(Palvelu):
   """
@@ -158,3 +158,4 @@ class ParempiPalvelu(Palvelu):
     print("tuotteen  " + self.tuotenimi + " edut ovat: ")
     for etu in self._edut_:
       print(self._edut_)
+  
