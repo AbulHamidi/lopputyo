@@ -116,6 +116,7 @@ class ParempiPalvelu(Palvelu):
   tulosta_edfut()
   """
   
+  
   def __init__(self, tuotenimi):
   """
   tämä ottaa tuotenimi luokan palvelu sisältä
@@ -126,20 +127,30 @@ class ParempiPalvelu(Palvelu):
   self._edut_ = []
   
   
-  def lisaa_edut(self):
+  def lisaa_edut(self, etu):
   """
   tämä lisää edun listaan tuoten edut
+  append lisää listaan _edut_
   """
+  self._edut_.append(etu)
   
   
   def poista_edut(self):
   """
   tämä poistaa edun listalta tuoten edut
+  jos tulee virhe kun ei o poistettava se ohitetaan
   """
+  try:
+    self._edut_.remove(etu)
+  except:
+    pass
+  
   
   def tulosta_edut(self):
   """
   tämä printtaa tuoten ja sen edut
   """
-  
+    print("tuotteen  " + self.tuotenimi + " edut ovat: ")
+    for etu in self._edut_:
+      print(self._edut_)
   
