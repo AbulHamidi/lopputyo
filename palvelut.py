@@ -111,8 +111,16 @@ class ParempiPalvelu(Palvelu):
   eli tämä luokka käsitä tuotenimi ja tuoten edut 
   """
   def lisaa_edut(self):
-    
+  """
+  tämä lisää edun listaan tuoten edut
+  """
   def poista_edut(self):
+  """
+  tämä poistaa edun listalta tuoten edut
+  """
   
   def tulosta_edut(self):
+  """
+  tämä printtaa tuoten ja sen edut
+  """
   
