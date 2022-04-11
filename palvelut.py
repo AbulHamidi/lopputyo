@@ -85,7 +85,7 @@ class Palvelu:
     """
     try:
       self.asiakkaat_lista.remove(asiakas)
-      except ValueError:
+    except ValueError:
         pass
 
   def tulosta_asiakkaat(self):
