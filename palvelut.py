@@ -36,7 +36,7 @@ class Asiakas:
     kolmas = random.randint(0,1000)
     
     numero = [eka+toka+kolmas]
-    return self.asiakasnumero_asetettu
+    return numero
   
   
   def aseta_ika(self, ika):
