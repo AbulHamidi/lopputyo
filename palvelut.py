@@ -108,18 +108,27 @@ class ParempiPalvelu(Palvelu):
   Luokan ParempiPalvelu konstruktori saa parametrina tuotenimen,
   jonka se lähettää kantaluokan konstruktorille argumenttina.
   Konstruktorissa luodaan edut-lista ja alustetaan se tyhjäksi.
+  
   eli tämä luokka käsitä tuotenimi ja tuoten edut 
+  metodit:
+  lisaa_edut()
+  poista_edut()
+  tulosta_edfut()
   """
   
-  def __init__(self):
+  def __init__(self, tuotenimi):
   """
   tämä ottaa tuotenimi luokan palvelu sisältä
   """
+  super(ParempiPalvelu, self).__init__(tuotenimi)
+  
+  
   
   def lisaa_edut(self):
   """
   tämä lisää edun listaan tuoten edut
   """
+  
   
   def poista_edut(self):
   """
