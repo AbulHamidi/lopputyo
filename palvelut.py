@@ -19,9 +19,9 @@ class Asiakas:
     :type numero: int
     """
     
-    self.nimi_asetettu = nimi
-    self.ika_asetettu = ika
-    self.luo_nro()
+    self.nimi = nimi
+    self.ika = ika
+    self.numero = luo_nro()
   
   
   def luo_nro(self):
@@ -41,7 +41,7 @@ class Asiakas:
   
   def aseta_ika(self, ika):
     """
-    palauttaa ikää, muuttajana ika_asetettu
+    palauttaa ikää, muuttajana ika
     """
     self.ika = ika
     return ika
@@ -103,7 +103,7 @@ class Palvelu:
     """
     palauttaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    return f'{Asiakas.aseta_nimi(nimi)} ({Asiakas.luo_nro(numero)}) on {Asiakas.aseta_ika(ika)}-vuotias.'
+    return f"{Asiakas.nimi} ({Asiakas.numero}) on {Asiakas.ika}-vuotias."
   
 class ParempiPalvelu(Palvelu):
   """
