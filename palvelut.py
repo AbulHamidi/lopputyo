@@ -101,7 +101,7 @@ class Palvelu:
     """
     palauttaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    return f'{Asiakas.aseta_nimi(asiakas)} ({Asiakas.luo_nro(numero)}) on {Asiakas.aseta_ika(asiakas)}-vuotias.'
+    return f'{Asiakas.aseta_nimi(nimi)} ({Asiakas.luo_nro(numero)}) on {Asiakas.aseta_ika(ika)}-vuotias.'
   
 class ParempiPalvelu(Palvelu):
   """
