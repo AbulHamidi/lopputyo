@@ -32,7 +32,7 @@ class Asiakas:
     :type numero: int
     """
     numero = []
-    numero.append(random.randint(0, 99))
+    numero.append(random.randint(0, 999))
     numero.append(random.randint(0, 999))
     numero.append(random.randint(0, 999))
     return numero
@@ -43,7 +43,7 @@ class Asiakas:
     palauttaa ikää, muuttajana ika
     """
     self.ika = ika
-    return ika
+    return
   
   
   def aseta_nimi(self, nimi):
@@ -51,7 +51,7 @@ class Asiakas:
     palauttaa nimi, muuttajana nimi
     """
     self.nimi = nimi
-    return nimi
+    return
 
   def aseta_numero(self):
     """
