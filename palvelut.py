@@ -103,4 +103,10 @@ class Palvelu:
     """
     return f'{Asiakas.aseta_nimi(asiakas)} ({Asiakas.luo_nro(asiakas)}) on {Asiakas.aseta_ika(asiakas)}-vuotias.'
   
-  
+class ParempiPalvelu(Palvelu):
+  """
+  Luokan ParempiPalvelu konstruktori saa parametrina tuotenimen,
+  jonka se lähettää kantaluokan konstruktorille argumenttina.
+  Konstruktorissa luodaan edut-lista ja alustetaan se tyhjäksi.
+  eli tämä luokka käsitä tuotenimi ja tuoten edut 
+  """
