@@ -118,38 +118,38 @@ class ParempiPalvelu(Palvelu):
   
   
   def __init__(self, tuotenimi):
-  """
-  tämä ottaa tuotenimi luokan palvelu sisältä
-  :ivar _edut_: tuoten edut
-  :type _edut_: list
-  """
-  super(ParempiPalvelu, self).__init__(tuotenimi)
-  self._edut_ = []
+    """
+    tämä ottaa tuotenimi luokan palvelu sisältä
+    :ivar _edut_: tuoten edut
+    :type _edut_: list
+    """
+    super(ParempiPalvelu, self).__init__(tuotenimi)
+    self._edut_ = []
   
   
   def lisaa_edut(self, etu):
-  """
-  tämä lisää edun listaan tuoten edut
-  append lisää listaan _edut_
-  """
-  self._edut_.append(etu)
+    """
+    tämä lisää edun listaan tuoten edut
+    append lisää listaan _edut_
+    """
+    self._edut_.append(etu)
   
   
   def poista_edut(self):
-  """
-  tämä poistaa edun listalta tuoten edut
-  jos tulee virhe kun ei o poistettava se ohitetaan
-  """
-  try:
-    self._edut_.remove(etu)
-  except:
-    pass
+    """
+    tämä poistaa edun listalta tuoten edut
+    jos tulee virhe kun ei o poistettava se ohitetaan
+    """
+    try:
+      self._edut_.remove(etu)
+    except:
+      pass
   
   
   def tulosta_edut(self):
-  """
-  tämä printtaa tuoten ja sen edut
-  """
+    """
+    tämä printtaa tuoten ja sen edut
+    """
     print("tuotteen  " + self.tuotenimi + " edut ovat: ")
     for etu in self._edut_:
       print(self._edut_)
