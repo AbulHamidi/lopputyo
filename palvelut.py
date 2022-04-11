@@ -21,7 +21,7 @@ class Asiakas:
     
     self.nimi_asetettu = nimi
     self.ika_asetettu = ika
-    self.asiakasnumero_asetettu = numero 
+    self.luo_nro()
   
   
   def luo_nro(self):
