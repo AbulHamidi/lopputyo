@@ -110,3 +110,9 @@ class ParempiPalvelu(Palvelu):
   Konstruktorissa luodaan edut-lista ja alustetaan se tyhjäksi.
   eli tämä luokka käsitä tuotenimi ja tuoten edut 
   """
+  def lisaa_edut(self):
+    
+  def poista_edut(self):
+  
+  def tulosta_edut(self):
+  
