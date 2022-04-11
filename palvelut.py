@@ -43,13 +43,15 @@ class Asiakas:
     """
     palauttaa ikää, muuttajana ika_asetettu
     """
+    self.ika = ika
     return ika
   
   
   def aseta_nimi(self, nimi):
     """
-    palauttaa nimi, muuttajana nimi_asetettu
+    palauttaa nimi, muuttajana nimi
     """
+    self.nimi = nimi
     return nimi
 
   
