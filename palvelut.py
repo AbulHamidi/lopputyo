@@ -72,14 +72,14 @@ class Palvelu:
     self.tuotenimi = tuotenimi
     self.asiakkaat_lista = []
  
-  def laita_asiakas_listaan(self, asiakas):
+  def lisaa_asiakas(self, asiakas):
     """
     laitetaan asiakkaan ikä ja nimi listaan
     append methodia käytetään listaan lisäämiseen
     """
     self.asiakkaat_lista.append(asiakas)
   
-  def poista_asiakas_listalta(self, asiakas):
+  def poista_asiakas(self, asiakas):
     """
     poistaan asiakas(ika, nimi). jos asiakas ei löyty listalta, virhe ignoorataan "pass"
     """
