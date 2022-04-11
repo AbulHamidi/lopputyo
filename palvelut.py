@@ -119,9 +119,11 @@ class ParempiPalvelu(Palvelu):
   def __init__(self, tuotenimi):
   """
   tämä ottaa tuotenimi luokan palvelu sisältä
+  :ivar _edut_: tuoten edut
+  :type _edut_: list
   """
   super(ParempiPalvelu, self).__init__(tuotenimi)
-  
+  self._edut_ = []
   
   
   def lisaa_edut(self):
