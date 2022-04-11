@@ -92,7 +92,7 @@ class Palvelu:
     """
     tulostaa asiakkaat
     """
-    print("tuotteen " + self.tuotenimi + "asiakkaat ovat: ")
+    print(" tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
     for asiakas in self.asiakkaat_lista:
       print(self.luo_asiakasrivi(asiakas))
   
@@ -101,7 +101,7 @@ class Palvelu:
     """
     palauttaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    return f'{Asiakas.aseta_nimi(asiakas)} ({Asiakas.luo_nro(asiakas)}) on {Asiakas.aseta_ika(asiakas)}-vuotias.'
+    return f'{Asiakas.aseta_nimi(asiakas)} ({Asiakas.luo_nro(numero)}) on {Asiakas.aseta_ika(asiakas)}-vuotias.'
   
 class ParempiPalvelu(Palvelu):
   """
