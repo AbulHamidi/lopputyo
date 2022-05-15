@@ -32,26 +32,24 @@ class Asiakas:
     :type numero: int
     """
     numero = []
-    numero.append(random.randint(0, 999))
+    numero.append(random.randint(0, 99))
     numero.append(random.randint(0, 999))
     numero.append(random.randint(0, 999))
     return numero
   
   
-  def aseta_ika(self, ika):
+  def aseta_ika(self):
     """
     palauttaa ikää, muuttajana ika
     """
-    self.ika = ika
-    return
+    return self.__ika
   
   
-  def aseta_nimi(self, nimi):
+  def aseta_nimi(self):
     """
     palauttaa nimi, muuttajana nimi
     """
-    self.nimi = nimi
-    return
+    return self.__nimi
 
   def aseta_numero(self):
     """
@@ -59,7 +57,7 @@ class Asiakas:
     """
     return f'{self.__asiakasnumero[0]:02}-{self.__asiakasnumero[1]:03}-{self.__asiakasnumero[2]:03}'
 
-class Palvelu:
+class Palvelu(Asiakas):
   """
   Luokan Palvelu konstruktori saa parametrina tuotenimen. Konstruktorissa luodaan asiakkaat-lista ja alustetaan se tyhjäksi.
   mothdit:
@@ -74,8 +72,15 @@ class Palvelu:
     :type tuotenimi: str
     :type asiakkaat_lista: list
     """
+    super()
     self.tuotenimi = tuotenimi
     self.asiakkaat_lista = []
+
+  def luo_asiakasrivi(self, asiakas):
+    """
+    palauttaa asiakkaan nimi, asiakasnumero ja ikän
+    """
+    return f"{Asiakas.aseta_nimi} ({Asiakas.aseta_numero}) on {Asiakas.aseta_ika}-vuotias."
  
   def lisaa_asiakas(self, asiakas):
     """
@@ -97,16 +102,9 @@ class Palvelu:
     """
     tulostaa asiakkaat
     """
-    print(" tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
+    print(f" tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
     for asiakas in self.asiakkaat_lista:
       print(self.luo_asiakasrivi(asiakas))
-  
-  
-  def luo_asiakasrivi(self, asiakas):
-    """
-    palauttaa asiakkaan nimi, asiakasnumero ja ikän
-    """
-    return f"{Asiakas.aseta_nimi(nimi)} ({Asiakas.aseta_numero}) on {aseta_ika(ika)}-vuotias."
   
 class ParempiPalvelu(Palvelu):
   """
@@ -132,15 +130,18 @@ class ParempiPalvelu(Palvelu):
     self._edut_ = []
   
   
-  def lisaa_edut(self, etu):
+  def lisaa_etu(self, etu):
     """
     tämä lisää edun listaan tuoten edut
     append lisää listaan _edut_
     """
-    self._edut_.append(etu)
+    try:
+      self._edut_.append(etu)
+    except:
+      pass
   
   
-  def poista_edut(self):
+  def poista_etu(self, etu):
     """
     tämä poistaa edun listalta tuoten edut
     jos tulee virhe kun ei o poistettava se ohitetaan
@@ -157,5 +158,4 @@ class ParempiPalvelu(Palvelu):
     """
     print("tuotteen  " + self.tuotenimi + " edut ovat: ")
     for etu in self._edut_:
-      print(self._edut_)
-  
+      print(etu)
