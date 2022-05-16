@@ -151,7 +151,6 @@ class ParempiPalvelu(Palvelu):
     except:
       pass
   
-  
   def tulosta_edut(self):
     """
     tämä printtaa tuoten ja sen edut
