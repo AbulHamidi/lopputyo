@@ -21,7 +21,7 @@ class Asiakas:
     
     self.__nimi = nimi
     self.__ika = ika
-    self.__numero = self.luo_nro
+    self.numero = self.luo_nro()
   
   
   def luo_nro(self):
@@ -31,31 +31,44 @@ class Asiakas:
     :ivar numero: arvottu satunnainen asiakasnumero
     :type numero: int
     """
-    numero = []
-    numero.append(random.randint(0, 99))
-    numero.append(random.randint(0, 999))
-    numero.append(random.randint(0, 999))
-    return numero
+    numerolista = []
+    numerolista.append(random.randint(0, 99))
+    numerolista.append(random.randint(0, 999))
+    numerolista.append(random.randint(0, 999))
+    return numerolista
   
-  
+  def get_numero(self):
+    """
+    hakee numeron "luo_nro" funktiosta ja palauttaa asiakasnumeron
+    """
+    text = f"{self.numero[0:3]}"
+    #text = f"{self.numero[0:3]}"
+    return(str(text))
+
+  def hae_ika(self,uusi_ika):
+    if uusi_ika == False:
+      raise ValueError("anna uusi ikä")
+    if uusi_ika == True:
+      self.__ika == uusi_ika
+
   def aseta_ika(self):
     """
     palauttaa ikää, muuttajana ika
     """
+  
     return self.__ika
   
-  
-  def aseta_nimi(self):
-    """
-    palauttaa nimi, muuttajana nimi
-    """
+  def set_nimi(self, nimi):
+    if nimi == "":
+      raise ValueError("Anna uusi nimi")
+
+  def get_nimi(self):
     return self.__nimi
 
-  def aseta_numero(self):
-    """
-    palauttaa numeron
-    """
-    return f'{self.__asiakasnumero[0]:02}-{self.__asiakasnumero[1]:03}-{self.__asiakasnumero[2]:03}'
+  def get_ika(self):
+    return self.__ika
+  
+
 
 class Palvelu(Asiakas):
   """
@@ -78,10 +91,12 @@ class Palvelu(Asiakas):
 
   def luo_asiakasrivi(self, asiakas):
     """
-    palauttaa asiakkaan nimi, asiakasnumero ja ikän
+    tulostaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    return f"{Asiakas.aseta_nimi} ({Asiakas.aseta_numero}) on {Asiakas.aseta_ika}-vuotias."
- 
+    text_asiakasrivi = f"{asiakas.get_nimi()} ({asiakas.get_numero()}) on {asiakas.get_ika()} -vuotias"
+    print(text_asiakasrivi)
+
+     
   def lisaa_asiakas(self, asiakas):
     """
     laitetaan asiakkaan ikä ja nimi listaan
@@ -102,7 +117,7 @@ class Palvelu(Asiakas):
     """
     tulostaa asiakkaat
     """
-    print(f" tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
+    print(f"tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
     for asiakas in self.asiakkaat_lista:
       print(self.luo_asiakasrivi(asiakas))
   
