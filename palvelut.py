@@ -28,8 +28,8 @@ class Asiakas:
     """
     Konstruktorissa luodaan asiakasnumero käyttämällä luo_nro-metodia.
     arvotaan asiakasnumero satunnaisesti. asettaa asiakasnumero jos kutsuu
-    :ivar numero: arvottu satunnainen asiakasnumero
-    :type numero: int
+    :ivar numerolista: arvottu satunnainen asiakasnumero
+    :type numero: list
     """
     numerolista = []
     numerolista.append(random.randint(0, 99))
@@ -41,9 +41,10 @@ class Asiakas:
     """
     hakee numeron "luo_nro" funktiosta ja palauttaa asiakasnumeron
     """
-    text = f"{self.numero[0:3]}"
-    #text = f"{self.numero[0:3]}"
-    return(str(text))
+
+    text = f"{self.numero[0], self.numero[1],self.numero[2]}"
+    fixedtext = text.replace(',', ' -')
+    return(fixedtext)
 
   def hae_ika(self,uusi_ika):
     if uusi_ika == False:
@@ -93,10 +94,8 @@ class Palvelu(Asiakas):
     """
     tulostaa asiakkaan nimi, asiakasnumero ja ikän
     """
-    text_asiakasrivi = f"{asiakas.get_nimi()} ({asiakas.get_numero()}) on {asiakas.get_ika()} -vuotias"
-    print(text_asiakasrivi)
+    return f"{asiakas.get_nimi()} ({asiakas.get_numero()}) on {asiakas.get_ika()} -vuotias"
 
-     
   def lisaa_asiakas(self, asiakas):
     """
     laitetaan asiakkaan ikä ja nimi listaan
@@ -115,11 +114,13 @@ class Palvelu(Asiakas):
 
   def tulosta_asiakkaat(self):
     """
-    tulostaa asiakkaat
+    tulostaa tuotteen asiakkaat 
     """
+    print("")
     print(f"tuotteen " + self.tuotenimi + " asiakkaat ovat: ")
     for asiakas in self.asiakkaat_lista:
       print(self.luo_asiakasrivi(asiakas))
+
   
 class ParempiPalvelu(Palvelu):
   """
@@ -170,6 +171,7 @@ class ParempiPalvelu(Palvelu):
     """
     tämä printtaa tuoten ja sen edut
     """
+    print("")
     print("tuotteen  " + self.tuotenimi + " edut ovat: ")
     for etu in self._edut_:
       print(etu)
